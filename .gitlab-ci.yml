@@ -1,0 +1,13 @@
+stages:
+  - build
+  - deploy
+
+build:
+  stage: build
+  script:
+    - python hello-world.py
+deploy:
+  stage: build
+  image: python:latest
+  script:
+  - aws s3 cp ./ s3://viyoma-gitlabs/ --recursive --exclude "*" --include "*.py"
