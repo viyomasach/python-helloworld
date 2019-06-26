@@ -11,7 +11,7 @@ export WELCOME_MSG="Hello World"
 python hello-world.py
 ```
 
-## To Test:
+## To Test::
 
 ```
 curl http://localhost:80
